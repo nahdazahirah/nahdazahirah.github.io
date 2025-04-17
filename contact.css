@@ -1,0 +1,298 @@
+/* RESET */
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-y: auto;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVBAR */
+.container-navbar {
+  background-color: #2d2618;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  padding: 0 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+  font-family: 'Rye', cursive;
+  font-size: 24px;
+  color: white;
+  animation: shake 1.5s infinite ease-in-out;
+  margin-left: auto;
+  padding: 15px;
+}
+
+.ul-navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 74px;
+  width: 100%;
+  height: 100%;
+}
+
+.li-navbar {
+  list-style-type: none;
+  padding: 6px 12px;
+  margin: 0 8px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.li-navbar:hover {
+  background-color: #9aa467;
+  color: #2d2618;
+  border-radius: 6px;
+  transform: translateY(-1px);
+  box-shadow: 0px 3px 6px rgba(154, 164, 103, 0.5);
+}
+
+.a-navbar {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.a-navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.a-navbar:hover::after {
+  transform: scaleX(1);
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 100px 20px 80px; /* padding diperkecil */
+    background-color: #f4e3c1;
+    color: white;
+    width: 100%;
+    max-width: 100vw; /* penuh sampai ujung */
+    box-sizing: border-box;
+    gap: 20px;
+  }
+  
+  /* Kontainer isi dua kolom */
+  .contact-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  /* Kotak kiri dan kanan */
+  .about-box,
+  .form-section {
+    flex: 1;
+    background-color: #2d2618;
+    padding: 30px; /* padding dikurangi */
+    border-radius: 15px;
+    font-size: 17px;
+    line-height: 1.8;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Judul dalam box */
+  .about-box h2,
+  .form-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Form Style */
+  .form-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-section label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .form-section input,
+  .form-section textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    color: #0d0d0d;
+  }
+  
+  .form-section input::placeholder,
+  .form-section textarea::placeholder {
+    color: #888;
+  }
+  
+  .form-section button {
+    margin-top: 10px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-section button:hover {
+    background-color: #1e40af;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-section {
+      flex-direction: column;
+      padding: 80px 15px 40px;
+    }
+  
+    .contact-container {
+      flex-direction: column;
+    }
+  }
+  
+/* BACKGROUND & OVERLAY */
+.contact-background {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background4.jpeg');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* BRAIN SHAPE FORM - VERSI KOTAK + GLOW */
+.brain-shape {
+  background-color: #2d2618;
+  border-radius: 15px;
+  padding: 30px;
+  margin-right: 60px;
+  box-shadow: 0 0 25px 5px #2d2618(0, 255, 200, 0.3);
+  animation: pulse 3s infinite ease-in-out;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.brain-shape:hover {
+  box-shadow: 0 0 35px 12px #2d2618(0, 255, 200, 0.6);
+  transform: scale(1.02);
+}
+
+/* FONT (khusus bagian tertentu) */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ANIMASI */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.015); }
+  100% { transform: scale(1); }
+}
+
+/* FOOTER */
+.container-footer {
+  background-color: #2d2618;
+  color: white;
+  height: 7vh;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; 
+  }
+  
+.a-footer {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.a-footer:hover {
+  color: #9aa467;
+}
+
+.contact-container 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

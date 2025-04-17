@@ -1,46 +1,77 @@
-<html>
-    <head>
-        <link rel = "stylesheet" href = "style.css" />
-    </head>
-    <body>
-        <div class = "container">
-            <!-- Navigation Bar -->
-            <div class = "container-navbar">
-                <ul class = "ul-navbar">
-                    <li class = "li-navbar">
-                        <a href = "#" class = "a-navbar">HOME</a>
-                    </li>
-                    <li class = "li-navbar">
-                        <a href = "about.html"class = "a-navbar">ABOUT ME</a>
-                    </li>
-                    <li class = "li-navbar">
-                        <a href = "contact.html" class = "a-navbar">CATEGORIES</a>
-                    </li>
-                    <li class = "li-navbar">
-                        <a href = "contact.html" class = "a-navbar">CONTACT ME</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Navigation Bar End -->
-            
-            <!-- Content 1 -->
-            <div class = "container-content">
-                <a class = "a-content">
-                    <img src = "background.jpeg" class = "img-content" width = 400 height = 200/>
-                </a>
-                <div class="overlay-text">Welcome to Nahda's Website</div>
-            </div>
-            <!-- Content 1 End -->
-             
-            <!-- Footer -->
-            <div class = "container-footer">
-                <ul class = "ul-footer">&copy; 2025 Nahda Zahirah. All rights reserved.
-                    <a href = "#" class = "a-footer">Privacy Policy></a>
-                    <a href = "#" class = "a-footer">Terms of Service></a>
-                </ul>
-            </div>
-            <!-- Footer End -->
-        </div>
-    </body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <title>Nahda's Website</title>
+</head>
+<body>
+    <!-- Background Audio -->
+    <audio id="bg-audio" autoplay loop>
+        <source src="nahda-voice.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="cat-sound">
+        <source src="meow.mp3" type="audio/mpeg" />
+    </audio>
 
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="container-navbar">
+            <div class="navbar-brand" id="nahda-brand">Nahda</div>
+            <ul class="ul-navbar">
+                <li class="li-navbar"><a href="#" class="a-navbar">HOME</a></li>
+                <li class="li-navbar"><a href="about.html" class="a-navbar">ABOUT ME</a></li>
+                <li class="li-navbar"><a href="skills.html" class="a-navbar">SKILLS</a></li>
+                <li class="li-navbar"><a href="phortofolio.html" class="a-navbar">PHORTOFOLIO</a></li>
+                <li class="li-navbar"><a href="categories.html" class="a-navbar">CATEGORIES</a></li>
+                <li class="li-navbar"><a href="contact.html" class="a-navbar">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content Section -->
+        <div class="container-content">
+            <!-- Gambar background sudah dihandle di CSS -->
+            <div class="overlay-text" id="typewriter"></div>
+
+            <!-- Shooting Stars -->
+            <div class="shooting-star"></div>
+            <div class="shooting-star delay1"></div>
+            <div class="shooting-star delay2"></div>
+            <div class="shooting-star delay3"></div>
+            <div class="shooting-star delay4"></div>
+            <div class="shooting-star delay5"></div>
+            <div class="shooting-star delay6"></div>
+            <div class="shooting-star delay7"></div>
+            <div class="shooting-star delay8"></div>
+
+            <!-- Twinkling Stars -->
+            <div class="twinkle-star pos1"></div>
+            <div class="twinkle-star pos2"></div>
+            <div class="twinkle-star pos3"></div>
+            <div class="twinkle-star pos4"></div>
+            <div class="twinkle-star pos5"></div>
+            <div class="twinkle-star pos6"></div>
+            <div class="twinkle-star pos7"></div>
+            <div class="twinkle-star pos8"></div>
+
+            <button class="enter-button" onclick="goToAbout()">About Me →</button>
+        </div>
+        <!-- Footer -->
+        <footer class="container-footer">
+            <ul class="ul-footer">
+                <span>&copy; 2025 Nahda Zahirah. All rights reserved.</span>
+                <a href="#" class="a-footer">Privacy Policy</a>
+                <a href="#" class="a-footer">>Terms of Service></a>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Audio Meong -->
+    <audio id="meow-sound" src="meong.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+    
+</body>
+</html>

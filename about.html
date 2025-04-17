@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Nahda</title>
+  <link rel="stylesheet" href="about.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    /* Animasi efek napas */
+    .breathing {
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    /* Tombol audio */
+    .play-button {
+      font-size: 28px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      margin-top: 10px;
+    }
+
+    .play-button:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation Bar -->
+    <div class="container-navbar">
+      <div class="navbar-brand" id="nahda-brand">Nahda</div>
+        <ul class="ul-navbar">
+          <li class="li-navbar"><a href="index.html" class="a-navbar">HOME</a></li>
+          <li class="li-navbar"><a href="about.html" class="a-navbar">ABOUT ME</a></li>
+          <li class="li-navbar"><a href="skills.html" class="a-navbar">SKILLS</a></li>
+          <li class="li-navbar"><a href="phortofolio.html" class="a-navbar">PHORTOFOLIO</a></li>
+          <li class="li-navbar"><a href="categories.html" class="a-navbar">CATEGORIES</a></li>
+          <li class="li-navbar"><a href="contact.html" class="a-navbar">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- About Section -->
+    <div class="content-wrapper">
+        <section class="about-content" data-aos="fade-up">
+            <div class="about-wrapper">
+            <div class="about-photo">
+                <img src="foto-nahda.png" alt="Foto Nahda" class="breathing" style="width: 150px; height: 150px; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.3);" />
+                <br />
+                <button class="play-button" onclick="document.getElementById('voice-intro').play()">🔊</button>
+                <audio id="voice-intro">
+                <source src="nahda-intro.mp3" type="audio/mpeg" />
+                Browser Anda tidak mendukung audio.
+                </audio>
+            </div>
+            <div class="about-info">
+                <h2 style="font-family: 'Pacifico', cursive; font-size: 2.2em;">About Me</h2>
+                <p style="font-family: 'Poppins', sans-serif;">
+                Selamat datang di profil saya! Saya Nahda Zahirah, seorang mahasiswa Universitas Riau asal Riau. Saya adalah anak sulung dari tiga bersaudara. Zodiac saya adalah Cancer.
+                </p>
+                <p style="font-family: 'Poppins', sans-serif;">
+                Saya senang mengeksplor hal baru yang membuat saya tertarik. Saya seringkali mengganti hobi baru karena rasa penasaran yang tinggi. Selain itu, saya juga memiliki passion dalam berkreasi, menulis, menggambar, dan memasak.
+                </p>
+                <div class="info-rows">
+                <div class="info-row">
+                    <div class="info-item"><strong>Name:</strong> Nahda Zahirah</div>
+                    <div class="info-item"><strong>Email:</strong> nahda.zahirah3190@email.com</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-item"><strong>Location:</strong> Pekanbaru, Riau</div>
+                    <div class="info-item"><strong>Availability:</strong> Open for collaboration</div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Bagian Hobi -->
+        <section class="hobbies-section" data-aos="fade-up">
+            <h2 class="hobbies-title">My Hobbies</h2>
+            <div class="hobbies-container">
+            <div class="hobby-item" data-sound="robot.mp3">🤖</div>
+            <div class="hobby-item" data-sound="programming.mp3">💻</div>
+            <div class="hobby-item" data-sound="cooking.mp3">🍳</div>
+            <div class="hobby-item" data-sound="reading.mp3">📚</div>
+            <div class="hobby-item" data-sound="music.mp3">🎧</div>
+            <div class="hobby-item" data-sound="craft.mp3">✂️</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-footer">
+      <ul class="ul-footer">
+        <span>&copy; 2025 Nahda Zahirah. All rights reserved.</span>
+      </ul>
+    </footer>
+</div>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+
+    <!-- 🔊 Suara klik ikon hobi (dengan toggle play/pause) -->
+    <script>
+    let currentAudio = null;
+
+    document.querySelectorAll(".hobby-item").forEach(item => {
+        item.addEventListener("click", () => {
+        const soundSrc = item.getAttribute("data-sound");
+
+        // Kalau audio yang sama diklik lagi → stop
+        if (currentAudio && currentAudio.src.includes(soundSrc)) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            currentAudio = null;
+        } else {
+            // Matikan audio sebelumnya kalau ada
+            if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            }
+
+            // Mainkan audio baru
+            currentAudio = new Audio(soundSrc);
+            currentAudio.play();
+        }
+        });
+    });
+    </script>
+
+</body>
+</html>
