@@ -237,7 +237,8 @@ body {
     margin: 0 20px;
   }
   
-  .media-box {
+  .media-box 
+  {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
     padding: 20px;
