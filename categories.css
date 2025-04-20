@@ -157,7 +157,7 @@ body {
   .img-box h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
-    color: #00ff88;
+    color: #f4e3c1;
     letter-spacing: 1px;
   }
   
@@ -206,7 +206,7 @@ body {
   
   .audio-box h3 {
     margin-bottom: 10px;
-    color: #1ed760;
+    color: #f4e3c1;
   }
   
   .audio-box audio {
@@ -250,7 +250,7 @@ body {
   .media-box h3 {
     margin-bottom: 10px;
     font-size: 18px;
-    color: #1ed760;
+    color: #f4e3c1;
   }
   
   .media-box audio,
@@ -258,25 +258,21 @@ body {
     width: 100%;
     border-radius: 10px;
   }
-  
-  .center-box {
-    grid-column: 2 / 3;
-  }
 
 /* Footer */
 .container-footer {
-  background-color: #2d2618;
-  color: white;
-  height: 7vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+    background-color: #2d2618;
+    color: white;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
 }
 
 .ul-footer {
