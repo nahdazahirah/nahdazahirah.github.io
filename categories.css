@@ -264,11 +264,13 @@ body {
     object-fit: cover;
   }  
 
-  .document{
-    position: center;
-    width: 60%; 
-    height: 300px; 
-  }
+  .document {
+    width: 60%;
+    height: 300px;
+    margin: 0 auto;
+    display: block;
+  }  
+
 /* Footer */
 .container-footer {
     background-color: #2d2618;
