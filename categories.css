@@ -264,6 +264,9 @@ body {
     object-fit: cover;
   }  
 
+  .document{
+    position: center;
+  }
 /* Footer */
 .container-footer {
     background-color: #2d2618;
