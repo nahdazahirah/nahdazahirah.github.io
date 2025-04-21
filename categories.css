@@ -4,8 +4,11 @@ body {
   background-color: #000f08;
   color: white;
   font-family: sans-serif;
-  padding: 20px;
-  margin: 0; /* Tambahkan ini untuk menghilangkan margin default */
+  padding-top: 40px;
+  padding-bottom: 10vh;
+  padding-left: 20px; 
+  padding-right: 20px;
+  margin: 0;
 }
 
 .judul {
@@ -16,18 +19,18 @@ body {
 }
 
 .container-navbar {
-    background-color: #2d2618;
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0; /* Tambahkan ini untuk memastikan navbar dimulai dari kiri */
-    z-index: 1000;
-    padding: 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease-in-out;
+  background-color: #2d2618;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0; /* Tambahkan ini untuk memastikan navbar dimulai dari kiri */
+  z-index: 1000;
+  padding: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
 }
 
 .container-navbar.scrolled {
@@ -264,33 +267,54 @@ body {
     object-fit: cover;
   }  
 
-  .document {
+  .document 
+  {
     width: 60%;
     height: 300px;
-    margin: 0 auto;
+    margin: auto;
+    min-height: 90vh;
+    border: none;
     display: block;
+    align-items: center;
   }  
 
-/* Footer */
-.container-footer {
-    background-color: #2d2618;
+  .document-title
+  {
+    text-align: center;
     color: white;
-    height: 7vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    font-family: 'Rye', cursive;
+    font-size: 3em;
+  }
+
+  .document iframe
+  {
     width: 100%;
-    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+    height: 80%;
+    margin-top: 10px;
+    object-fit: cover;
+  }
+
+/* Footer */
+.container-footer 
+{
+  background-color: #2d2618;
+  color: white;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
 }
 
 .ul-footer {
-    list-style: none;
+  list-style: none;
 }
 
 .ul-footer span {
-    font-size: 14px;
+  font-size: 14px;
 }
