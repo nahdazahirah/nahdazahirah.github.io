@@ -123,7 +123,8 @@ body {
   transition: 0.3s;
 }
 
-.font-box span {
+.font-box span 
+{
   display: block;
   margin-top: 10px;
   font-size: 0.7em;
