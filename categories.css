@@ -266,6 +266,8 @@ body {
 
   .document{
     position: center;
+    width: 60%; 
+    height: 300px; 
   }
 /* Footer */
 .container-footer {
