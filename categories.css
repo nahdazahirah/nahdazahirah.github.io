@@ -53,8 +53,8 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    margin: 0; /* Tambahkan ini untuk menghilangkan margin default */
-    padding: 0 20px; /* Pindahkan padding ke sini */
+    margin: 0;
+    padding: 0 20px;
 }
 
 .li-navbar {
