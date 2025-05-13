@@ -344,14 +344,22 @@ body {
   align-items: center;
 }
 
-.document-preview {
-  width: 100%;
-  height: 1122px; /* Tinggi A4 (297mm) */
+.document-preview 
+{
+  width: 100% !important; /* Pastikan full width */
+  height: 1122px; /* Tinggi A4 */
   border: 1px solid #444;
   border-radius: 10px;
-  background-color: white;
-  overflow: auto; /* Scroll horizontal & vertikal */
-  margin-bottom: 20px; /* Jarak dengan tombol download */
+  background: white;
+  margin: 0 auto; /* Pusatkan */
+  display: block; /* Hindari floating layout */
+}
+
+/* Hapus float/column yang tidak perlu */
+.document-preview iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none;
 }
 
 /* Style Scrollbar */
@@ -371,6 +379,7 @@ body {
 .download-link {
   text-align: center;
   width: 100%;
+  margin-top: 25px;
 }
 
 .download-link a {
