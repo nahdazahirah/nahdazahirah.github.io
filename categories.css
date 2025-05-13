@@ -435,24 +435,7 @@ body {
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1024px) {
-  .document-preview {
-    height: 70vh;
-  }
-}
-
-@media (max-width: 1024px) {
-  .document-container {
-    width: 95%;
-    padding: 20px;
-  }
-  
-  .document-preview {
-    height: 80vh;
-  }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
   .document-title {
     font-size: 2em;
   }
@@ -466,7 +449,4 @@ body {
     font-size: 1em;
   }
   
-  .grid-container, .audio-grid {
-    grid-template-columns: 1fr;
-  }
 }
