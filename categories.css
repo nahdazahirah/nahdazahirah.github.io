@@ -436,20 +436,12 @@ body {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
-  .grid-container, .audio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .media-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-  
   .document-preview {
     height: 70vh;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .document-container {
     width: 95%;
     padding: 20px;
@@ -460,7 +452,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .document-title {
     font-size: 2em;
   }
