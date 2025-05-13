@@ -103,7 +103,7 @@ body {
 /* ===== MAIN CONTENT ===== */
 .main-content {
   flex: 1;
-  padding-top: 12vh; /* Untuk navbar fixed */
+  padding-top: 40vh; /* Untuk navbar fixed */
   padding-bottom: 40px;
 }
 
@@ -114,6 +114,9 @@ body {
   justify-items: center;
 }
 
+.font-box judul{
+  padding-top: 50px;
+}
 .font-box {
   background-color: #02130c;
   border: 1px solid #444;
