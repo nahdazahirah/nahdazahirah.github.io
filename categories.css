@@ -264,13 +264,23 @@ body {
     object-fit: cover;
   }  
 
-  .document
+  .document 
   {
-    position: center;
+    margin: 120px auto 80px auto; /* Posisi tengah dengan margin atas-bawah */
     width: 60%;
-    height: 300px;
-    align-items: center;
+    max-width: 800px;
+    height: 80vh; /* Panjang agar terlihat seperti halaman */
+    background-color: #ffffff;
+    color: #000;
+    overflow-y: scroll;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    position: relative;
   }
+
 
 /* Footer */
 .container-footer {
