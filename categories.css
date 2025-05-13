@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Garamond&family=Georgia&family=Montserrat&family=Poppins&family=Roboto&family=Cambria&family=Arial&family=Helvetica&family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
 
+/* ===== GLOBAL STYLES ===== */
 body {
   background-color: #000f08;
   color: white;
   font-family: sans-serif;
-  padding: 20px;
   margin: 0;
-  padding-top: 10vh; /* Untuk mengkompensasi navbar fixed */
-  padding-bottom: 7vh; /* Untuk mengkompensasi footer fixed */
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===== NAVBAR ===== */
@@ -98,6 +100,13 @@ body {
     transform: scaleX(1);
 }
 
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  padding-top: 12vh; /* Untuk navbar fixed */
+  padding-bottom: 40px;
+}
+
 /* ===== JUDUL ===== */
 .judul {
   text-align: center;
@@ -115,6 +124,7 @@ body {
   justify-items: center;
   margin: 40px auto;
   max-width: 1200px;
+  padding: 0 20px;
 }
 
 .font-box {
@@ -308,11 +318,12 @@ body {
 
 /* ===== DOCUMENT PREVIEW SECTION ===== */
 .document-section {
-  padding: 40px 20px;
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin: 0 auto 60px;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  margin: 0 auto;
 }
 
 .document-title {
@@ -325,25 +336,45 @@ body {
 }
 
 .document-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 794px; /* Lebar A4 */
+  max-width: 100%;
   background-color: #02130c;
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  max-width: 794px; /* Lebar A4 dalam pixel (210mm) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .document-preview {
   width: 100%;
-  height: 1122px; /* Tinggi A4 dalam pixel (297mm) */
+  height: 1122px; /* Tinggi A4 */
   border: 1px solid #444;
   border-radius: 10px;
   background-color: #f9f9f9;
-  margin-bottom: 20px;
+  overflow: auto;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Scrollbar styling */
+.document-preview::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.document-preview::-webkit-scrollbar-thumb {
+  background: #9aa467;
+  border-radius: 5px;
+}
+
+.document-preview::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.download-link {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .download-link a {
@@ -364,20 +395,14 @@ body {
   box-shadow: 0 5px 15px rgba(154, 164, 103, 0.4);
 }
 
-
 /* ===== FOOTER ===== */
 .container-footer {
     background-color: #2d2618;
     color: white;
-    height: 7vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    padding: 20px;
+    text-align: center;
     width: 100%;
+    margin-top: auto; /* Ini yang membuat footer tetap di bawah */
     box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -424,15 +449,13 @@ body {
   
   .document-preview {
     height: 70vh;
-    min-height: 500px;
   }
 }
 
-/* Responsive Adjustments */
 @media (max-width: 900px) {
   .document-container {
+    width: 95%;
     padding: 20px;
-    max-width: 95%;
   }
   
   .document-preview {
@@ -452,5 +475,9 @@ body {
   .download-link a {
     padding: 10px 20px;
     font-size: 1em;
+  }
+  
+  .grid-container, .audio-grid {
+    grid-template-columns: 1fr;
   }
 }
