@@ -1,346 +1,297 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="categories.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Categories</title>
-  <link rel="stylesheet" href="fonts.css" />
-</head>
-<body>
-    <!-- ===== NAVBAR dari template lama (adapted) ===== -->
-    <nav class="container-navbar">
-        <div class="navbar-brand" id="nahda-brand">Nahda</div>
-        <ul class="ul-navbar">
-            <li class="li-navbar"><a href="index.html" class="a-navbar">HOME</a></li>
-            <li class="li-navbar"><a href="about.html" class="a-navbar">ABOUT ME</a></li>
-            <li class="li-navbar"><a href="skills.html" class="a-navbar">SKILLS</a></li>
-            <li class="li-navbar"><a href="phortofolio.html" class="a-navbar">PHORTOFOLIO</a></li>
-            <li class="li-navbar"><a href="categories.html" class="a-navbar">CATEGORIES</a></li>
-            <li class="li-navbar"><a href="contact.html" class="a-navbar">CONTACT</a></li>
-        </ul>
-    </nav>
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Garamond&family=Georgia&family=Montserrat&family=Poppins&family=Roboto&family=Cambria&family=Arial&family=Helvetica&family=Ubuntu&display=swap');
 
-    <h1 class="judul">Font Populer</h1>
-    <div class="grid-container">
-        <div class="font-box times">Times New Roman<br><span>Ini adalah contoh teks menggunakan font Times New Roman.</span></div>
-        <div class="font-box arial">Arial<br><span>Ini adalah contoh teks menggunakan font Arial.</span></div>
-        <div class="font-box helvetica">Helvetica<br><span>Ini adalah contoh teks menggunakan font Helvetica.</span></div>
-        
-        <div class="font-box garamond">Garamond<br><span>Ini adalah contoh teks menggunakan font Garamond.</span></div>
-        <div class="font-box roboto">Roboto<br><span>Ini adalah contoh teks menggunakan font Roboto.</span></div>
-        <div class="font-box georgia">Georgia<br><span>Ini adalah contoh teks menggunakan font Georgia.</span></div>
+body {
+  background-color: #000f08;
+  color: white;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 0; /* Tambahkan ini untuk menghilangkan margin default */
+}
 
-        <div class="font-box cambria">Cambria<br><span>Ini adalah contoh teks menggunakan font Cambria.</span></div>
-        <div class="font-box comicsans">Comic Sans<br><span>Ini adalah contoh teks menggunakan font Comic Sans.</span></div>
-        <div class="font-box montserrat">Montserrat<br><span>Ini adalah contoh teks menggunakan font Montserrat.</span></div>
-        
-        <div class="font-box poppins center">Poppins<br><span>Ini adalah contoh teks menggunakan font Poppins.</span></div>
-    </div>
+.judul {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 30px;
+  letter-spacing: 4px;
+}
 
-    <h1 class="judul">Format Gambar Populer</h1>
-    <div class="grid-container">
-    <div class="img-box">
-      <h3>PNG</h3>
-      <img src="gambar/background2.png" alt="background2.png">
-      <h3>Size 310 KB</h3>
-    </div>
-    <div class="img-box">
-      <h3>JPG</h3>
-      <img src="gambar/background2.jpg" alt="background2.jpg">
-      <h3>Size 69,1 KB</h3>
-    </div>
-    <div class="img-box">
-      <h3>JPEG</h3>
-      <img src="gambar/background2.jpeg" alt="background2.jpeg">
-      <h3>Size 69,1 KB</h3>
-    </div>
+.container-navbar {
+    background-color: #2d2618;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0; /* Tambahkan ini untuk memastikan navbar dimulai dari kiri */
+    z-index: 1000;
+    padding: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
 
-    <div class="img-box">
-      <h3>WEBP</h3>
-      <img src="gambar/background2.webp" alt="background2.webp">
-      <h3>Size 20,1 KB</h3>
-    </div>
-    <div class="img-box">
-      <h3>GIF</h3>
-      <img src="gambar/background2.gif" alt="background2.gif">
-      <h3>Size 158 KB</h3>
-    </div>
-    <div class="img-box">
-      <h3>BMP</h3>
-      <img src="gambar/background2.bmp" alt="background2.bmp">
-      <h3>Size 892 KB</h3>
-    </div>
+.container-navbar.scrolled {
+    background-color: rgba(45, 38, 24, 0.9);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+}
 
-    <div class="img-box">
-      <h3>AVIF</h3>
-      <img src="gambar/background2.avif" alt="background2.avif">
-      <h3>Size 13 KB</h3>
-    </div>
-    <div class="img-box">
-      <h3>TIFF</h3>
-      <img src="gambar/background2.tiff" alt="background2.tiff">
-      <a href="gambar/background2.tiff" download class="download-btn">Download TIFF</a>
-      <h3>Size 893 KB</h3>
-    </div>
-    <div class="img-box">
-      <h3>HEIF</h3>
-      <img src="gambar/background2.heif" alt="background2.heif">
-      <a href="gambar/background2.heif" download class="download-btn">Download HEIF</a>
-      <h3>Size 28,9 KB</h3>
-    </div>
-    <div class="img-box center">
-      <h3>SVG</h3>
-      <img src="gambar/background2.svg" alt="background2.svg">
-      <h3>Size 22,7 KB</h3>
-    </div>
-    </div>
+.navbar-brand {
+    font-family: 'Rye', cursive;
+    font-size: 24px;
+    color: white;
+    animation: shake 1.5s infinite ease-in-out;
+    margin-left: 20px; /* Ubah dari auto ke nilai tetap */
+    padding: 15px;
+}
 
-    <section id="audio-formats"></section>
-      <h1 class ="audio-title">Format Audio Populer</h1>
-      <div class="audio-grid">
-        <!-- Baris 1 -->
-        <div class="audio-box">
-          <h3>MP3</h3>
-          <audio controls>
-            <source src="audio/music.mp3" type="audio/mpeg">
-            <h3>Size 5,63 MB</h3>
-            Browser tidak mendukung audio ini.
-          </audio>
-        </div>
-        <div class="audio-box">
-          <h3>AIFF</h3>
-          <audio controls>
-            <source src="audio/music.aiff" type="audio/aiff">
-            <h3>Size 41,4 MB</h3>
-            Browser tidak mendukung audio ini.
-          </audio>
-        </div>
-        <div class="audio-box">
-          <h3>OGG</h3>
-          <audio controls>
-            <source src="audio/music.ogg" type="audio/ogg">
-            <h3>Size 3,09 MB</h3>
-            Browser tidak mendukung audio ini.
-          </audio>
-        </div>
-    
-        <!-- Baris 2 -->
-        <div class="audio-box">
-          <h3>AAC</h3>
-          <audio controls>
-            <source src="audio/music.aac" type="audio/aac">
-            <h3>Size 3,79 MB</h3>
-            Browser tidak mendukung audio ini.
-          </audio>
-        </div>
-        <div class="audio-box">
-          <h3>FLAC</h3>
-          <audio controls>
-            <source src="audio/music.flac" type="audio/flac">
-            <h3>Size 42,5 MB</h3>
-            Browser tidak mendukung audio ini.
-          </audio>
-        </div>
-        <div class="audio-box">
-          <h3>OPUS</h3>
-          <audio controls>
-            <source src="audio/music.opus" type="audio/opus">
-            <h3>Size 2,77 MB</h3>
-            Browser tidak mendukung audio ini.
-          </audio>
-        </div>
-    
-        <!-- Baris 3 -->
-        <div class="audio-box">
-          <h3>WMA</h3>
-          <audio controls>
-            <source src="audio/music.wma" type="audio/x-ms-wma">
-            <h3>Size 4,04 MB</h3>
-            Browser tidak mendukung audio ini.
-          </audio>
-        </div>
-        <div class="audio-box">
-          <h3>M4A</h3>
-          <audio controls>
-            <source src="audio/music.m4a" type="audio/mp4">
-            <h3>Size 3,79 MB</h3>
-            Browser tidak mendukung audio ini.
-          </audio>
-        </div>
-        <div class="audio-box">
-          <h3>OGA</h3>
-          <audio controls>
-            <source src="audio/music.oga" type="audio/ogg">
-            <h3>Size 42,7 MB</h3>
-            Browser tidak mendukung audio ini.
-          </audio>
-        </div>
-    
-        <!-- Tengah bawah -->
-        <div class="audio-box center-box">
-          <h3>VOC</h3>
-          <audio controls>
-            <source src="audio/music.voc" type="audio/voc">
-            <h3>Size 41,4 KB</h3>
-            Browser tidak mendukung audio ini.
-          </audio>
-        </div>
-      </div>
-      </section>
-      
-      <!-- 10 FORMAT VIDEO POPULER -->
-      <section class="media-section">
-          <h1 class="media-title">Format video populer</h1>
-          <div class="media-grid">
-          <div class="media-box">
-            <h3>MP4</h3>
-            <video controls><source src="video/video.mp4" type="video/mp4"></video>
-            <h3>Size 1,25 MB</h3>
-          </div>
-          <div class="media-box">
-            <h3>WEBM</h3>
-            <video controls><source src="video/video.webm" type="video/webm"></video>
-            <h3>Size 3,16 MB</h3>
-          </div>
-          <div class="media-box">
-            <h3>3GP</h3>
-            <video controls><source src="video/video.3gp" type="video/3gpp"></video>
-            <h3>Size 2,13 MB</h3>
-          </div>
-          <div class="media-box">
-            <h3>AVI</h3>
-            <video controls><source src="video/video.avi" type="video/avi"></video>
-            <h3>Size 2,15 MB</h3>
-          </div>
-          <div class="media-box">
-            <h3>MKV</h3>
-            <video controls><source src="video/video.mkv" type="video/mkv"></video>
-            <h3>Size 2,12 MB</h3>
-          </div>
-          <div class="media-box">
-            <h3>MOV</h3><video controls>
-            <source src="video/video.mov" type="video/mov"></video>
-            <h3>Size 2,13 MB</h3>
-          </div>
-          <div class="media-box">
-            <h3>FLV</h3><video controls>
-            <source src="video/video.flv" type="video/flv"></video>
-            <h3>Size 2,15 MB</h3>
-          </div>
-          <div class="media-box">
-            <h3>WMV</h3><video controls>
-            <source src="video/video.wmv" type="video/wmv"></video>
-            <h3>Size 6,18 MB</h3>
-          </div>
-          <div class="media-box">
-            <h3>MPG</h3>
-            <video controls><source src="video/video.mpg" type="video/mpeg"></video>
-            <h3>Size 11,8 MB</h3>
-          </div>
-          <div class="media-box center-box">
-            <h3>OGV</h3>
-            <video controls><source src="video/video.ogv" type="video/ogg"></video>
-            <h3>Size 661 KB</h3>
-          </div>
-        </div>
-      </section>
-      
-      <section class="media-section">
-        <h2 class="media-title">Animasi Populer</h2>
-        <div class="media-grid">
-            <!-- YouTube 1 -->
-            <div class="media-box">
-                <h3>2D TRADISIONAL</h3>
-                <iframe src="https://www.youtube.com/embed/KEdcOR179_Q" frameborder="0" allowfullscreen></iframe>
-            </div>
-            
-            <!-- YouTube 2 -->
-            <div class="media-box">
-                <h3>CGI</h3>
-                <iframe src="https://www.youtube.com/embed/iM8cMIrI3So" frameborder="0" allowfullscreen></iframe>
-            </div>
-            
-            <!-- YouTube 3 -->
-            <div class="media-box">
-                <h3>STOP MOTION</h3>
-                <iframe src="https://www.youtube.com/embed/PODYTzZ0jL4" frameborder="0" allowfullscreen></iframe>
-            </div>
-        
-            <!-- YouTube 4 -->
-            <div class="media-box">
-                <h3>MOTION GRAPHICS</h3>
-                <iframe src="https://www.youtube.com/embed/kiVGOS7-n_o" frameborder="0" allowfullscreen></iframe>
-            </div>
-        
-            <!-- YouTube 5 -->
-            <div class="media-box">
-                <h3>ROTOSCOPING</h3>
-                <iframe src="https://www.youtube.com/embed/ZCyLX5l_0Ec" frameborder="0" allowfullscreen></iframe>
-            </div>
-        
-            <!-- YouTube 6 -->
-            <div class="media-box">
-                <h3>CUT OUT ANIMATION</h3>
-                <iframe src="https://www.youtube.com/embed/SHg-rLjDVIY" frameborder="0" allowfullscreen></iframe>
-            </div>
-        
-            <!-- YouTube 7 -->
-            <div class="media-box">
-                <h3>CLAY ANIMATION</h3>
-                <iframe src="https://www.youtube.com/embed/4-mkF0zRCvs" frameborder="0" allowfullscreen></iframe>
-            </div>
-        
-            <!-- YouTube 8 -->
-            <div class="media-box">
-                <h3>EXPERINMENTAL ANIMATION</h3>
-                <iframe src="https://www.youtube.com/embed/V1jwUEcS_jc" frameborder="0" allowfullscreen></iframe>
-            </div>
-        
-            <!-- YouTube 9 -->
-            <div class="media-box">
-                <h3>WHITEBOARD ANIMATION</h3>
-                <iframe src="https://www.youtube.com/embed/yFxTEc4Yd9A" frameborder="0" allowfullscreen></iframe>
-            </div>
-        
-            <!-- YouTube 10 -->
-            <div class="media-box">
-              <h3>ANIME</h3>
-              <iframe src="https://www.youtube.com/embed/2_5YSdrPqU8" frameborder="0" allowfullscreen></iframe>
-            </div>
+.ul-navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Tambahkan ini untuk menghilangkan margin default */
+    padding: 0 20px; /* Pindahkan padding ke sini */
+}
 
-            <!-- YouTube 10 -->
-            <div class="media-box">
-              <h3>GIF WALKING PEOPLE</h3>
-              <iframe src="animasi/walkingPeople.gif" type="walking People Gif"></iframe>
-            </div>
+.li-navbar {
+    list-style-type: none;
+    padding: 6px 12px;
+    margin: 0 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
 
-            <!-- YouTube 10 -->
-            <div class="media-box">
-              <h3>MP4 WALKING PEOPLE</h3>
-              <iframe src="animasi/walkingPeople.mp4" type="video/mp4"></iframe>
-            </div>
-          </div>
-      </section>
-      
-      <div class="document">
-        <h2 class="document-title">LAPORAN SISTEM MULTIMEDIA</h2>
-        <a href="https://drive.google.com/file/d/1NEE0frOaHmisJkE6UxNXns3Li22pp8rW" target="_blank" 
-        style="font-size: 18px; color: #007bff; text-decoration: none;">
-        <iframe src="https://drive.google.com/file/d/1NEE0frOaHmisJkE6UxNXns3Li22pp8rW/preview">
-          allow = autoplay;
-        </iframe>
-      </div>
-      
-      <!-- ===== FOOTER dari template lama (adapted) ===== -->
-      <footer class="container-footer">
-          <ul class="ul-footer">
-              <span>&copy; 2025 Nahda Zahirah.
-                <span>&copy; 2025 Nahda Zahirah. All rights reserved.</span>
-                <a href="#" class="a-footer">Privacy Policy</a>
-                <a href="#" class="a-footer">Terms of Service</a>
-            </ul>
-        </footer>
-    </body>
-    </html>
+.li-navbar:hover {
+    background-color: #9aa467;
+    color: #2d2618;
+    border-radius: 6px;
+    transform: translateY(-1px);
+    box-shadow: 0px 3px 6px rgba(154, 164, 103, 0.5);
+}
+
+.a-navbar {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.a-navbar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.a-navbar:hover::after {
+    transform: scaleX(1);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.font-box {
+  background-color: #02130c;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 350px;
+  text-align: left;
+  font-size: 1.5em;
+  transition: 0.3s;
+}
+
+.font-box span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.7em;
+  opacity: 0.8;
+}
+
+/* Font Styles */
+.times { font-family: 'Times New Roman', Times, serif; }
+.arial { font-family: Arial, sans-serif; }
+.helvetica { font-family: Helvetica, sans-serif; }
+.garamond { font-family: Garamond, serif; }
+.roboto { font-family: 'Roboto', sans-serif; }
+.georgia { font-family: Georgia, serif; }
+.cambria { font-family: Cambria, serif; }
+.comicsans { font-family: 'Comic Sans MS', cursive, sans-serif; }
+.montserrat { font-family: 'Montserrat', sans-serif; }
+.poppins { font-family: 'Poppins', sans-serif; }
+
+/* Kotak terakhir tengah */
+.center {
+  grid-column: 2 / 3;
+}
+
+.img-box {
+    background-color: #02130c;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+  }
+  
+  .img-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #f4e3c1;
+    letter-spacing: 1px;
+  }
+  
+  .img-box img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Posisi tengah di akhir baris */
+  .img-box.center {
+    grid-column: 2 / 3;
+  }
+
+  .audio-formats {
+    text-align:center; 
+    font-family: 'Courier New', monospace; 
+    color: white;
+    margin-top: 100px;
+  }
+
+  .audio-title
+  {
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Rye', cursive;
+  }
+
+  .audio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+  
+  .audio-box {
+    background-color: #0d0d0d;
+    border: 1px solid #444;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .audio-box h3 {
+    margin-bottom: 10px;
+    color: #f4e3c1;
+  }
+  
+  .audio-box audio {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  .center-box {
+    grid-column: 2 / 3;
+  }
+
+  .media-section { 
+    padding: 30px 20px;
+  }
+  
+  .media-title {
+    text-align: center;
+    color: white;
+    font-family: 'Rye', cursive;
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+  
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 0 20px;
+  }
+  
+  .media-box {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 0 10px #f4e3c1;
+  }
+  
+  .media-box h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #f4e3c1;
+  }
+  
+  .media-box iframe,
+  .media-box video,
+  .media-box img,
+  .media-box audio {
+    width: 100%;
+    max-height: 250px;
+    border-radius: 10px;
+    margin-top: 10px;
+    object-fit: cover;
+  }  
+
+  .document
+  {
+    position: center;
+    width: 60%;
+    height: 300px;
+    align-items: center;
+  }
+
+/* Footer */
+.container-footer {
+    background-color: #2d2618;
+    color: white;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ul-footer {
+    list-style: none;
+}
+
+.ul-footer span {
+    font-size: 14px;
+}
